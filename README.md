@@ -4,18 +4,18 @@ This repository is a monorepo to iRango project repositories. Proposed as a Tech
 
 | Repository | Content |
 | :---:   | :---: |
-| [fiap-irango-infra](https://github.com/m4tob/fiap-irango-infra) | Repository to configure the network infrastructure and general cloud dependencies to run iRango project. (In AWS using Terraform as IaC) |
-| [fiap-irango-database](https://github.com/m4tob/fiap-irango-database) | Repository to configure the databases used in iRango project. (In AWS using Terraform as IaC) |
-| [fiap-irango-k8s](https://github.com/m4tob/fiap-irango-k8s) | Repository to configure Kubernetes cluster to handle iRango containers. (In AWS using Terraform as IaC)|
-| [fiap-irango-auth-service](https://github.com/m4tob/fiap-irango-auth-service) | Repository to configure AWS Cognito and API Gateway. (Using Terraform as IaC) |
-| [fiap-irango-api](https://github.com/m4tob/fiap-irango-api) | Repository containing iRango API main service |
+| [fiap-irango-infra](https://github.com/IanOliv/fiap-irango-infra) | Repository to configure the network infrastructure and general cloud dependencies to run iRango project. (In AWS using Terraform as IaC) |
+| [fiap-irango-database](https://github.com/IanOliv/fiap-irango-database) | Repository to configure the databases used in iRango project. (In AWS using Terraform as IaC) |
+| [fiap-irango-k8s](https://github.com/IanOliv/fiap-irango-k8s) | Repository to configure Kubernetes cluster to handle iRango containers. (In AWS using Terraform as IaC)|
+| [fiap-irango-auth-service](https://github.com/IanOliv/fiap-irango-auth-service) | Repository to configure AWS Cognito and API Gateway. (Using Terraform as IaC) |
+| [fiap-irango-api](https://github.com/IanOliv/fiap-irango-api) | Repository containing iRango API main service |
 
 ## Archictecture Diagrams
 [Archictecture Diagrams](./docs/architecture-diagrams.md)
 
 ### Cloning repository
 ```bash
-git clone --recurse-submodules git@github.com:m4tob/fiap-tech-challenge.git
+git clone --recurse-submodules git@github.com:IanOliv/fiap-tech-challenge.git
 ```
 
 ### Updating submodules
@@ -46,7 +46,7 @@ We also need create a Secrets Manager with the name `fiap-irango-secrets-api` in
 
 4 - Build a Docker image in `fiap-irango-api` repository. Export the Image URI as `IMAGE_URI` env.
 
-5 - Apply `fiap-irango-k8s` kubernetes passing secrets and `IMAGE_URI` envs using `envsubst` [README.md](`https://github.com/m4tob/fiap-irango-k8s/blob/main/README.md#without-make`).
+5 - Apply `fiap-irango-k8s` kubernetes passing secrets and `IMAGE_URI` envs using `envsubst` [README.md](`https://github.com/IanOliv/fiap-irango-k8s/blob/main/README.md#without-make`).
 
 6 - Run Run `fiap-irango-auth-service` terraform files
 
@@ -57,6 +57,6 @@ Each repository has at least one workflow file whick is runned with push actions
   - Terraform Destroy - Delete all created resources on cloud. It can be run manually onlye.
 
 We also have two releases workflows:
-  - [release.yml](https://github.com/m4tob/fiap-irango-api/blob/main/.github/workflows/release.yml) - Build Docker image and push to ECR Repository. Alto trigger the next release workflow.
-  - [release-api.yml](https://github.com/m4tob/fiap-irango-k8s/blob/main/.github/workflows/release-api.yml) - Using previous built Docker image, apply Kubernetes api files.
+  - [release.yml](https://github.com/IanOliv/fiap-irango-api/blob/main/.github/workflows/release.yml) - Build Docker image and push to ECR Repository. Alto trigger the next release workflow.
+  - [release-api.yml](https://github.com/IanOliv/fiap-irango-k8s/blob/main/.github/workflows/release-api.yml) - Using previous built Docker image, apply Kubernetes api files.
     
