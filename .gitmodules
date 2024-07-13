@@ -1,15 +1,39 @@
 [submodule "repositories/fiap-irango-infra"]
 	path = repositories/fiap-irango-infra
 	url = git@github.com:IanOliv/fiap-irango-infra.git
+	branch = main
+
 [submodule "repositories/fiap-irango-auth-service"]
 	path = repositories/fiap-irango-auth-service
 	url = git@github.com:IanOliv/fiap-irango-auth-service.git
+	branch = main
+
 [submodule "repositories/fiap-irango-k8s"]
 	path = repositories/fiap-irango-k8s
 	url = git@github.com:IanOliv/fiap-irango-k8s.git
+	branch = main
+
 [submodule "repositories/fiap-irango-api"]
 	path = repositories/fiap-irango-api
 	url = git@github.com:IanOliv/fiap-irango-api.git
+	branch = main
+
+[submodule "repositories/fiap-irango-order-api"]
+	path = repositories/fiap-irango-order-api
+	url = git@github.com:IanOliv/fiap-irango-order-api.git
+	branch = main
+	
+[submodule "repositories/fiap-irango-payment-api"]
+	path = repositories/fiap-irango-payment-api
+	url = git@github.com:IanOliv/fiap-irango-payment-api.git
+	branch = main
+
+[submodule "repositories/fiap-irango-assembly-api"]
+	path = repositories/fiap-irango-assembly-api
+	url = git@github.com:IanOliv/fiap-irango-assembly-api.git
+	branch = main
+
 [submodule "repositories/fiap-irango-database"]
 	path = repositories/fiap-irango-database
 	url = git@github.com:IanOliv/fiap-irango-database.git
+	branch = main
