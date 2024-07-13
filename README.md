@@ -10,6 +10,15 @@ This repository is a monorepo to iRango project repositories. Proposed as a Tech
 | [fiap-irango-auth-service](https://github.com/IanOliv/fiap-irango-auth-service) | Repository to configure AWS Cognito and API Gateway. (Using Terraform as IaC) |
 | [fiap-irango-api](https://github.com/IanOliv/fiap-irango-api) | Repository containing iRango API main service |
 
+## Micro Services 
+| Repository | Content |
+| :---:   | :---: |
+| [fiap-irango-order-api](https://github.com/IanOliv/fiap-irango-order-api) | 
+service to handle Consumidor, Produto and Pedido flow|
+| [fiap-irango-assembly-api](https://github.com/IanOliv/fiap-irango-assembly-api) | service to handle the flow of assembly of the Pedido|
+| [fiap-irango-payment-api](https://github.com/IanOliv/fiap-irango-payment-api) |  service to handle Payment flow |
+
+
 ## Archictecture Diagrams
 [Archictecture Diagrams](./docs/architecture-diagrams.md)
 
