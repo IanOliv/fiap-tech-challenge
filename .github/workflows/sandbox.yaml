@@ -20,3 +20,8 @@ jobs:
                     echo "GitHub Actor: ${{ github.actor }}"
                     echo "GitHub Workflow: ${{ github.workflow }}"
                     echo "GitHub Action: ${{ github.action }}"
+            - name: 'Clone repository'
+              run: |
+                    git clone https://github.com/IanOliv/fiap-tech-challenge.git
+                    cd fiap-tech-challenge
+                    ls -la
