@@ -22,6 +22,6 @@ jobs:
                     echo "GitHub Action: ${{ github.action }}"
             - name: 'Clone repository'
               run: |
-                    git clone --recurse-submodules https://github.com/IanOliv/fiap-tech-challenge.git
+                    git clone --recurse-submodules https://x-access-token:${{ secrets.MY_PAT }}@github.com/IanOliv/fiap-tech-challenge.git
                     cd fiap-tech-challenge
                     ls -la
