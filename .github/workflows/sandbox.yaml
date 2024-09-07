@@ -23,5 +23,5 @@ jobs:
             - name: 'Clone repository'
               run: |
                     git clone --recurse-submodules https://x-access-token:${{ secrets.MY_PAT }}@github.com/IanOliv/fiap-tech-challenge.git
-                    cd fiap-tech-challenge
-                    ls -la
+                    ls -la fiap-tech-challenge
+                    ls -la fiap-tech-challenge/repositories
