@@ -6,7 +6,7 @@ on:
             - '*'
 
 jobs:
-    print-env-vars:
+    config:
         runs-on: ubuntu-latest
 
         steps:
@@ -25,3 +25,10 @@ jobs:
                     git clone --recurse-submodules https://x-access-token:${{ secrets.MY_PAT }}@github.com/IanOliv/fiap-tech-challenge.git
                     ls -la fiap-tech-challenge
                     ls -la fiap-tech-challenge/repositories
+            - name: Send Message Build Failure
+              uses: appleboy/discord-action@master
+              with:
+                color: "#f44254"
+                webhook_id: ${{ secrets.WEBHOOK_ID }}
+                webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+                message: "Docker Build Failure!"
