@@ -32,3 +32,15 @@ jobs:
                 webhook_id: ${{ secrets.WEBHOOK_ID }}
                 webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
                 message: "Docker Build Failure!"
+
+    notify:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Send Message Build Failure
+              uses: appleboy/discord-action@master
+              with:
+                color: "#00ff00"
+                webhook_id: ${{ secrets.WEBHOOK_ID }}
+                webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+                message: "Docker Build Failure!"
