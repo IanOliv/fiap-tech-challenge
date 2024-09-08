@@ -35,7 +35,7 @@ jobs:
 
     notify:
         runs-on: ubuntu-latest
-
+        needs: config
         steps:
             - name: Send Message Build Failure
               uses: appleboy/discord-action@master
